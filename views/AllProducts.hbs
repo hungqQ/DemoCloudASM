@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="styleForTable.css">
+    <title>All Products</title>
+</head>
+<body>
+    <div class="topnav">
+        <a href="/"><b>ATN Toy Store</b></a>
+        <a href="/new">New Product</a>
+        <a href="/all">All Product</a>
+    </div>
+
+    <div class="row">
+        <div class="column middle">
+            <hr>
+            <h1 style="padding-bottom: 20px;">Products</h1>    
+            <div>
+                <a href="/new" class="btnAdd">Add new</a>   
+                    
+                <form action="/search" method="post" style="padding-bottom: 10px; float:right">
+                    <input type="text" name="txtSearch" style="height: 30px; width: 200px">
+                    <input type="submit" value="Search" class="search">
+                </form>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Sort</button>
+                    <div class="dropdown-content">
+                        <a href="/SortByPrice">Sort by Price </a>
+                    </div>
+                </div> 
+            </div>
+            <div class="right">
+                <table border="1" cellspacing="0" width="100%" "table table-striped">
+                    <tr align="center" style="height: 40px;">
+                        <th width="150">Image</th>
+                        <th>Product name</th>
+                        <th>Price</th>
+                        <th>Quality</th>
+                        <th>Dicount</th>
+                        <th>Description</th>
+                        <th>Editing</th>
+                    </tr>
+                        {{#each results}}
+                            <tr align="center">
+                                <td width = "20%"><img src="" width="100%" alt=""><img src="{{picture}}" alt="" width="150"></td>
+                                <td width = "10%">{{name}}</td>
+                                {{#if (CheckPrice price) }}
+                                    <td width = "10%" style="color: green;">{{price}}</td>
+                                {{else}}
+                                    <td width = "10%" style="color: blue;">{{price}}</td>
+                                {{/if}}                               
+                                <td width = "10%">{{supplier}}</td>
+                                <td>{{dicount}}</td>
+                                <td>{{description}}</td>
+                                <td class="button" width = "15%"> 
+                                    <a href="/edit?id={{_id}}" class="update">Edit</a>
+                                    <a href="/delete?id={{_id}}" onclick="return confirm('Are you sure to delete this product?')" class="delete">Delete</a>
+                                </td>
+                            </tr>
+                        {{/each}}
+                </table>
+            </div>
+        </div> 
+    </div>
+
+    <div class="footer">
+    </div>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,79 @@
+td.button a.update{
+    border-radius: 4px;
+    background-color: rgb(87, 98, 255);
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+td.button a.delete{
+    border-radius: 4px;
+    background-color: rgb(255, 25, 25);
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+.btnAdd{
+    border-radius: 4px;
+    background-color: rgb(0, 138, 173);
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline; 
+    margin-bottom: -10px;
+}
+.search{
+    border-radius: 4px;
+    background-color: rgb(0, 138, 173);
+    color: white;
+    padding: 6px;
+    text-decoration: none;
+}
+td.button a:hover{
+    background-color: rgb(0, 138, 173);
+}
+
+.dropbtn {
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: rgb(0, 138, 173
+    
+    );
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    margin-bottom: -10px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline; 
+    float: right;
+    margin-right: 10px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }

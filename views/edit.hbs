@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=q">
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="styleForForm.css">
+    <title>Edit Product</title>
+</head>
+<body>
+    <div class="topnav fixed-top">
+        <a href="/"><b>ATN Toy Store</b></a>
+        <a href="/new">New Product</a>
+        <a href="/all">All Product</a>
+    </div>
+
+    <div class="row">
+        <div class="column middle">
+            <h1>Edit Product</h1>
+            <hr>
+            <div class="container">
+                <form action="/update" method="post">
+                    <input type="hidden" name="id" value="{{prod._id}}">
+                    <div class="row">
+                        <div>
+                            <label for="ProductName" style="color: rgb(29, 134, 27);"><b>Product Name</b></label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="productName" name="txtName"  value="{{prod.name}}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <label for="price" style="color: rgb(29, 134, 27);"><b>Price</b></label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="price" name="txtPrice"  value="{{prod.price}}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <label for="Quality" style="color: rgb(29, 134, 27);"><b>Quality</b></label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="Quality" name="txtQuality"  value="{{prod.quality}}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <label for="Dicount" style="color: rgb(29, 134, 27);"><b>Dicount</b></label>
+                        </div>
+                        <div class="col-75">
+                            <textarea id="Dicount" name="txtDicount"  value="{{prod.dicount}}" style="height:200px"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <label for="Description" style="color: rgb(29, 134, 27);"><b>Description</b></label>
+                        </div>
+                        <div class="col-75">
+                            <textarea id="Description" name="txtDescription"  value="{{prod.description}}" style="height:200px"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <label for="img" style="color: rgb(29, 134, 27);"><b>Image</b></label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="price" name="txtURL"  value="{{prod.picture}}">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div> 
+    </div>
+
+    <div class="footer" style="height: 50px;">
+    </div>
+</body>
+</html>

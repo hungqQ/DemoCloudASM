@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleHome.css">
+
+    <title>Home</title>
+</head>
+<body>
+    <div class="topnav fixed-top">
+        <a href="/all"><b>Store </b></a>
+    </div>
+
+    <div class="row">
+        <div class="column middle">
+            <div class="main">              
+                <ul>
+                    <li><a href=""><b style="font-size: larger;">ATN Toy Store</b></a></li>
+                    <li style="float:right"><a href="">Service</a></li>
+                    <li style="float:right"><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <hr>
+            <div class="main2">
+                <h1>Product </h1>
+                {{#each results}}
+                    <div class="product">
+                        <a href=""><img src="{{picture}}" alt="" width="150"></a>
+                        <div style="text-align: left; padding-left: 10px;">
+                            Name: {{name}}
+                            <br>
+                            Desciption: {{description}}
+                            <br>
+                            Price: <b style="font-size: large; color: red;">{{price}}</b>
+                        </div>                       
+                    </div>
+                {{/each}}
+            </div>
+        </div> 
+    </div>
+
+    <div class="footer">
+        <p>Footer</p>
+    </div>
+</body>
+</html>
